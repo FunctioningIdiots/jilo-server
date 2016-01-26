@@ -6,9 +6,7 @@ Seamless thought capturing.
 - Command-line-like interface for quick captures
 - Break out to markdown for longer captures
 - Back-end brain that automatically associates and organizes
-
-###Scope
-For now, I will write the client only. That will persist data into a cloud based storage.
+- Consuming the notes later is a task separate from capture
 
 ###Technology Requirements
 ####Editor
@@ -31,7 +29,8 @@ For these reasons, we'll use HTML/CSS/Javascript hosted by Electron. A CLI will 
 - Immutable - all changes are appended, no data is destroyed
 - Open API - allows for extensibility, export, and openness
 
-F# is a joy and it is naturally immutable. Azure has graph services and Cortana as a service, which should make it work well for this system (along with the fact that F# is .NET).
+Elixir, because why not.
+Data stores - lots of options.
 
 ###Editor Commands
 All commands should be prepended with 'jilo' to run on command-line.

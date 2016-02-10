@@ -47,14 +47,4 @@ defmodule Jilosrv.NoteController do
         |> render(Jilosrv.ChangesetView, "error.json", changeset: changeset)
     end
   end
-
-  def delete(conn, %{"id" => id}) do
-    note = Repo.get!(Note, id)
-
-    # Here we use delete! (with a bang) because we expect
-    # it to always work (and if it does not, it will raise).
-    Repo.delete!(note)
-
-    send_resp(conn, :no_content, "")
-  end
 end

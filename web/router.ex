@@ -22,6 +22,6 @@ defmodule Jilosrv.Router do
   # Other scopes may use custom stacks.
   scope "/api", Jilosrv do
     pipe_through :api
-    resources "/notes", NoteController, except: [:new, :edit]
+    resources "/note", NoteController, except: [:new, :edit]
   end
 end

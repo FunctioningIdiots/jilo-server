@@ -1,1 +1,1 @@
-docker run --rm -p 5432:5432 --name jilosrv_dev -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres postgres
+docker run --rm -p 5432:5432 -v ~/jilo-data:/var/lib/postgresql/data/jilo --name jilosrv_dev -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres -e PGDATA=/var/lib/postgresql/data/jilo postgres 

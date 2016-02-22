@@ -50,11 +50,4 @@ defmodule Jilosrv.NoteControllerTest do
     conn = put conn, note_path(conn, :update, note), note: @invalid_attrs
     assert json_response(conn, 422)["errors"] != %{}
   end
-
-  test "deletes chosen resource", %{conn: conn} do
-    note = Repo.insert! %Note{}
-    conn = delete conn, note_path(conn, :delete, note)
-    assert response(conn, 204)
-    refute Repo.get(Note, note.id)
-  end
 end
